@@ -1,0 +1,37 @@
+header {
+  width: 320px;
+  padding: 0 22px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 320px;
+  padding: 0 22px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  header {
+    width: 716px;
+    padding: 0 32px;
+  }
+
+  .container {
+    width: 716px;
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    width: 948px;
+    padding: 0 32px;
+  }
+
+  .container {
+    width: 914px;
+    padding: 0 64px;
+  }
+}
