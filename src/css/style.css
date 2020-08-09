@@ -35,3 +35,228 @@ header {
     padding: 0 64px;
   }
 }
+
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.head-wrapper {
+  position: relative;
+  background-image: url(../img/picture.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 1000px;
+  margin-bottom: 46px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 2/1),
+(min-resolution: 192dpi) {
+  .head-wrapper {
+    background-image: url(../img/picture@2x.jpg);
+  }
+}
+
+.head-wrapper::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(rgb(243, 129, 129)),
+      to(rgb(252, 227, 138)));
+  background: -o-linear-gradient(rgb(243, 129, 129), rgb(252, 227, 138));
+  background: linear-gradient(rgb(243, 129, 129), rgb(252, 227, 138));
+  opacity: 0.9;
+}
+
+.head,
+.section-intro {
+  position: relative;
+  z-index: 1;
+}
+
+.head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 86px;
+  padding-top: 35px;
+  padding-bottom: 100px;
+}
+
+.head__logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.head__logo--link,
+.head__link {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.head__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 620px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.head__link:hover,
+.head__menu--svg:hover .head__menu--svg_path {
+  color: #fce38a;
+  fill: #fce38a;
+}
+
+.head__item {
+  position: relative;
+}
+
+.head__item::after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 3px;
+  width: 50px;
+  background-color: #fce38a;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.head__item:hover::after {
+  opacity: 1;
+}
+
+.head__page-title {
+  display: block;
+  margin: 0 auto 120px;
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 140px;
+  text-transform: uppercase;
+  max-width: 840px;
+}
+
+.head__page-title--script {
+  display: block;
+  font-family: "Kaushan Script", cursive;
+  font-size: 72px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.head__button {
+  display: block;
+  margin: 0 auto;
+  width: 160px;
+  height: 42px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background: none;
+  border: 4px solid #fff;
+  cursor: pointer;
+}
+
+.head__button--hover:hover,
+.head__button--hover:focus {
+  color: #fce38a;
+}
+
+.foot {
+  border-top: 1px solid #e5e5e5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 62px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.foot__copyright {
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.foot__copyright--link {
+  text-decoration: none;
+  color: #f38181;
+}
+
+.subscribe-form__input {
+  width: 230px;
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid #e7e7e7;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 40px;
+  color: #cccccc;
+}
+
+.subscribe-form__button {
+  border: none;
+  height: 40px;
+  width: 150px;
+  background-color: #95e1d3;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.subscribe-form {
+  font-size: 0;
+}
